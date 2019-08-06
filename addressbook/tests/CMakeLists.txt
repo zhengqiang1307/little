@@ -1,0 +1,3 @@
+add_executable(addressbook_test addressbook_test.cpp)
+target_link_libraries(addressbook_test addressbook)
+add_test(NAME addressbook_test COMMAND addressbook_test)
