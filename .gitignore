@@ -1,1 +1,4 @@
-CMakeLists.txt.user.e87414e.20
+CMakeLists.txt.user*
+build/
+rapidjson/json_test.cpp.autosave
+.vscode/
