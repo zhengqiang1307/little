@@ -4,10 +4,23 @@
 #include "rapidjson/document.h"     // rapidjson's DOM-style API
 #include "rapidjson/prettywriter.h" // for stringify JSON
 #include <cstdio>
+
 #include <string>
+#include "GuideSprite.h"
+#include <iostream>
 
 using namespace rapidjson;
 using namespace std;
+
+int main(int, char *[])
+{
+  string fileString = initBook("rapidjson/guidesprite.txt");
+  std::cout << fileString << std::endl;
+  // printf("%s\n",fileString.c_str());
+  // test1();
+  // test2();
+  return 0;
+}
 
 /*
 {
@@ -19,7 +32,6 @@ using namespace std;
           ]
 }
 */
-
 std::string build_json_msg()
 {
   Document doc;
@@ -227,13 +239,5 @@ int test2()
   document.Accept(
       writer); // Accept() traverses the DOM and generates Handler events.
   puts(sb.GetString());
-  return 0;
-}
-
-int main(int, char *[])
-{
-
-  // test1();
-  // test2();
   return 0;
 }
