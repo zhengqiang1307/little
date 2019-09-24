@@ -1,0 +1,2287 @@
+{
+    "book": [
+        {
+            "page": {
+                "pageid": "2",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "13",
+                                    "sound": "2_0_asking0.mp3",
+                                    "mode": "voice",
+                                    "animationgroup": [
+                                        {
+                                            "groupid": "11",
+                                            "spritetag": "8"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "mode": "voice",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "voice",
+                                                "sound": "",
+                                                "keyword": "[word]\ndark"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "9",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "9",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "9",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "13",
+                                                            "spritetag": "9"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "3",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "17.2",
+                                    "sound": "3_0_asking0.mp3",
+                                    "mode": "voice",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "mode": "voice",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "voice",
+                                                "sound": "",
+                                                "keyword": "[word]\npark"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "24",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "25",
+                                                            "spritetag": "11"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "24",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "25",
+                                                            "spritetag": "11"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "24",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "25",
+                                                            "spritetag": "11"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "4",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "15",
+                                    "sound": "4_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": [
+                                        {
+                                            "groupid": "49",
+                                            "spritetag": "29"
+                                        },
+                                        {
+                                            "groupid": "44",
+                                            "spritetag": "31"
+                                        },
+                                        {
+                                            "groupid": "45",
+                                            "spritetag": "32"
+                                        },
+                                        {
+                                            "groupid": "46",
+                                            "spritetag": "33"
+                                        },
+                                        {
+                                            "groupid": "47",
+                                            "spritetag": "34"
+                                        },
+                                        {
+                                            "groupid": "48",
+                                            "spritetag": "35"
+                                        },
+                                        {
+                                            "groupid": "60",
+                                            "spritetag": "39"
+                                        },
+                                        {
+                                            "groupid": "61",
+                                            "spritetag": "30"
+                                        },
+                                        {
+                                            "groupid": "62",
+                                            "spritetag": "40"
+                                        },
+                                        {
+                                            "groupid": "63",
+                                            "spritetag": "41"
+                                        },
+                                        {
+                                            "groupid": "64",
+                                            "spritetag": "42"
+                                        },
+                                        {
+                                            "groupid": "65",
+                                            "spritetag": "43"
+                                        },
+                                        {
+                                            "groupid": "66",
+                                            "spritetag": "44"
+                                        },
+                                        {
+                                            "groupid": "67",
+                                            "spritetag": "45"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "answermode": "disorder",
+                                    "quantity": "6",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "30",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "38",
+                                                        "spritetag": "30"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "answer": {
+                                                "answerid": "1",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "31",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "43",
+                                                        "spritetag": "31"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "answer": {
+                                                "answerid": "2",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "32",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "39",
+                                                        "spritetag": "32"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "answer": {
+                                                "answerid": "3",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "33",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "42",
+                                                        "spritetag": "33"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "answer": {
+                                                "answerid": "4",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "34",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "41",
+                                                        "spritetag": "34"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "answer": {
+                                                "answerid": "5",
+                                                "mode": "touch",
+                                                "sound": "4_0_answer0_0.mp3",
+                                                "spritetag": "35",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "40",
+                                                        "spritetag": "35"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "4_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        },
+                                                        {
+                                                            "groupid": "58",
+                                                            "spritetag": "38"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "4_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        },
+                                                        {
+                                                            "groupid": "58",
+                                                            "spritetag": "38"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "4_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        },
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "58",
+                                                            "spritetag": "38"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "56",
+                                                            "spritetag": "29"
+                                                        },
+                                                        {
+                                                            "groupid": "55",
+                                                            "spritetag": "30"
+                                                        },
+                                                        {
+                                                            "groupid": "54",
+                                                            "spritetag": "31"
+                                                        },
+                                                        {
+                                                            "groupid": "53",
+                                                            "spritetag": "32"
+                                                        },
+                                                        {
+                                                            "groupid": "52",
+                                                            "spritetag": "33"
+                                                        },
+                                                        {
+                                                            "groupid": "51",
+                                                            "spritetag": "34"
+                                                        },
+                                                        {
+                                                            "groupid": "50",
+                                                            "spritetag": "35"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "5",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "16.2",
+                                    "sound": "5_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": [
+                                        {
+                                            "groupid": "51",
+                                            "spritetag": "49"
+                                        },
+                                        {
+                                            "groupid": "58",
+                                            "spritetag": "56"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "answermode": "disorder",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "5_0_answer0_0.mp3",
+                                                "spritetag": "56",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "57",
+                                                        "spritetag": "56"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "6",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "16.9",
+                                    "sound": "6_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "",
+                                                "spritetag": "25",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "41",
+                                                        "spritetag": "25"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "6_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "7",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "6",
+                                                            "spritetag": "4"
+                                                        },
+                                                        {
+                                                            "groupid": "32",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "34",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "31",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "33",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "1",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "4",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "2",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "8",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "16",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "19",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "17",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "18",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "43",
+                                                            "spritetag": "9"
+                                                        },
+                                                        {
+                                                            "groupid": "5",
+                                                            "spritetag": "5"
+                                                        },
+                                                        {
+                                                            "groupid": "3",
+                                                            "spritetag": "6"
+                                                        },
+                                                        {
+                                                            "groupid": "0",
+                                                            "spritetag": "0"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "7"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "13",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "14",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "36",
+                                                            "spritetag": "23"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "6_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "7",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "6",
+                                                            "spritetag": "4"
+                                                        },
+                                                        {
+                                                            "groupid": "32",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "34",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "31",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "33",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "1",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "4",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "2",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "8",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "16",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "19",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "17",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "18",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "43",
+                                                            "spritetag": "9"
+                                                        },
+                                                        {
+                                                            "groupid": "5",
+                                                            "spritetag": "5"
+                                                        },
+                                                        {
+                                                            "groupid": "3",
+                                                            "spritetag": "6"
+                                                        },
+                                                        {
+                                                            "groupid": "0",
+                                                            "spritetag": "0"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "7"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "13",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "14",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "36",
+                                                            "spritetag": "23"
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "6_0_right0_0.mp3",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "7",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "6",
+                                                            "spritetag": "4"
+                                                        },
+                                                        {
+                                                            "groupid": "32",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "34",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "31",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "33",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "1",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "4",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "2",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "8",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "16",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "19",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "17",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "18",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "43",
+                                                            "spritetag": "9"
+                                                        },
+                                                        {
+                                                            "groupid": "5",
+                                                            "spritetag": "5"
+                                                        },
+                                                        {
+                                                            "groupid": "3",
+                                                            "spritetag": "6"
+                                                        },
+                                                        {
+                                                            "groupid": "0",
+                                                            "spritetag": "0"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "7"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "13",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "14",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "36",
+                                                            "spritetag": "23"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": [
+                                                        {
+                                                            "groupid": "7",
+                                                            "spritetag": "3"
+                                                        },
+                                                        {
+                                                            "groupid": "6",
+                                                            "spritetag": "4"
+                                                        },
+                                                        {
+                                                            "groupid": "32",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "34",
+                                                            "spritetag": "19"
+                                                        },
+                                                        {
+                                                            "groupid": "31",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "33",
+                                                            "spritetag": "20"
+                                                        },
+                                                        {
+                                                            "groupid": "1",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "4",
+                                                            "spritetag": "1"
+                                                        },
+                                                        {
+                                                            "groupid": "2",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "8",
+                                                            "spritetag": "2"
+                                                        },
+                                                        {
+                                                            "groupid": "16",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "19",
+                                                            "spritetag": "10"
+                                                        },
+                                                        {
+                                                            "groupid": "17",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "18",
+                                                            "spritetag": "11"
+                                                        },
+                                                        {
+                                                            "groupid": "43",
+                                                            "spritetag": "9"
+                                                        },
+                                                        {
+                                                            "groupid": "5",
+                                                            "spritetag": "5"
+                                                        },
+                                                        {
+                                                            "groupid": "3",
+                                                            "spritetag": "6"
+                                                        },
+                                                        {
+                                                            "groupid": "0",
+                                                            "spritetag": "0"
+                                                        },
+                                                        {
+                                                            "groupid": "10",
+                                                            "spritetag": "7"
+                                                        },
+                                                        {
+                                                            "groupid": "12",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "13",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "14",
+                                                            "spritetag": "8"
+                                                        },
+                                                        {
+                                                            "groupid": "36",
+                                                            "spritetag": "23"
+                                                        },
+                                                        {
+                                                            "groupid": "41",
+                                                            "spritetag": "25"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "7",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "10.8",
+                                    "sound": "7_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": [
+                                        {
+                                            "groupid": "19",
+                                            "spritetag": "12"
+                                        }
+                                    ]
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "7_0_answer0_0.mp3",
+                                                "spritetag": "4",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "17",
+                                                        "spritetag": "4"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "7_0_right0_0.mp3",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "7_0_right0_0.mp3",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "7_0_right0_0.mp3",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "8",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "0",
+                                    "sound": "8_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "disorder",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "8_0_answer0_0.mp3",
+                                                "spritetag": "14",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "8",
+                                                        "spritetag": "14"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "9",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "0",
+                                    "sound": "9_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "disorder",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "9_0_answer0_0.mp3",
+                                                "spritetag": "14",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "8",
+                                                        "spritetag": "14"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "page": {
+                "pageid": "11",
+                "mode": "auto",
+                "sound": "",
+                "groupset": [
+                    {
+                        "groupid": "0",
+                        "questionset": [
+                            {
+                                "question": {
+                                    "questionid": "0",
+                                    "delay": "4.9",
+                                    "sound": "11_0_asking0.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "11_0_answer0_0.mp3",
+                                                "spritetag": "33",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "30",
+                                                        "spritetag": "33"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "question": {
+                                    "questionid": "1",
+                                    "delay": "5.2",
+                                    "sound": "11_0_asking1.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "11_0_answer0_0.mp3",
+                                                "spritetag": "34",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "31",
+                                                        "spritetag": "34"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "question": {
+                                    "questionid": "2",
+                                    "delay": "5.5",
+                                    "sound": "11_0_asking2.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "11_0_answer0_0.mp3",
+                                                "spritetag": "35",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "32",
+                                                        "spritetag": "35"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "question": {
+                                    "questionid": "3",
+                                    "delay": "5.8",
+                                    "sound": "11_0_asking3.mp3",
+                                    "mode": "touch",
+                                    "animationgroup": []
+                                },
+                                "answer": {
+                                    "answermode": "order",
+                                    "quantity": "1",
+                                    "answerset": [
+                                        {
+                                            "answer": {
+                                                "answerid": "0",
+                                                "mode": "touch",
+                                                "sound": "11_0_answer0_0.mp3",
+                                                "spritetag": "36",
+                                                "animationgroup": [
+                                                    {
+                                                        "groupid": "33",
+                                                        "spritetag": "36"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ],
+                                    "wronglist": []
+                                },
+                                "promptset": [
+                                    {
+                                        "prompt": {
+                                            "mode": "right",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "wrong",
+                                            "type": "order",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "4",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "timeout",
+                                            "type": "order",
+                                            "delay": "15",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "3",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "prompt": {
+                                            "mode": "repeat",
+                                            "type": "random",
+                                            "list": [
+                                                {
+                                                    "defaultid": "1",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                },
+                                                {
+                                                    "defaultid": "2",
+                                                    "sound": "",
+                                                    "animationgroup": []
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

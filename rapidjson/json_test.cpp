@@ -24,28 +24,28 @@ std::string build_json_msg()
 {
   Document doc;
   doc.SetObject();
-  Document::AllocatorType& a=doc.GetAllocator();
+  Document::AllocatorType &a = doc.GetAllocator();
 
-  doc.AddMember("name","jack",a);
-  doc.AddMember("age",18,a);
-  
+  doc.AddMember("name", "jack", a);
+  doc.AddMember("age", 18, a);
+
   Value sub(kArrayType);
-  sub.PushBack("a",a);
-  sub.PushBack("b",a);
-  doc.AddMember("sub",sub,a);
+  sub.PushBack("a", a);
+  sub.PushBack("b", a);
+  doc.AddMember("sub", sub, a);
 
   Value json(kArrayType);
   Value obj(kObjectType);
-  obj.AddMember("a","A",a);
-  obj.AddMember("b","B",a);
-  json.PushBack(obj,a);
+  obj.AddMember("a", "A", a);
+  obj.AddMember("b", "B", a);
+  json.PushBack(obj, a);
 
   Value obj1(kObjectType);
-  obj1.AddMember("c","C",a);
-  obj1.AddMember("d","D",a);
-  json.PushBack(obj1,a);
+  obj1.AddMember("c", "C", a);
+  obj1.AddMember("d", "D", a);
+  json.PushBack(obj1, a);
 
-  doc.AddMember("elp",json,a);
+  doc.AddMember("elp", json, a);
 
   StringBuffer s;
   Writer<StringBuffer> writer(s);
@@ -53,9 +53,14 @@ std::string build_json_msg()
   return std::string(s.GetString());
 }
 
-int main(int, char *[]) {
+void test1()
+{
+  std::string o = build_json_msg();
+  printf("dom is %s\n", o.c_str());
+}
 
-#if 0
+int test2()
+{
   ////////////////////////////////////////////////////////////////////////////
   // 1. Parse a JSON text string to a document.
 
@@ -110,10 +115,10 @@ int main(int, char *[]) {
 
   printf("n = %s\n", document["n"].IsNull() ? "null" : "?");
 
-  assert(document["i"].IsNumber()); // Number is a JSON type, but C++ needs more
-                                    // specific type.
-  assert(document["i"].IsInt()); // In this case, IsUint()/IsInt64()/IsUint64()
-                                 // also return true.
+  assert(document["i"].IsNumber());           // Number is a JSON type, but C++ needs more
+                                              // specific type.
+  assert(document["i"].IsInt());              // In this case, IsUint()/IsInt64()/IsUint64()
+                                              // also return true.
   printf("i = %d\n", document["i"].GetInt()); // Alternative (int)document["i"]
 
   assert(document["pi"].IsNumber());
@@ -137,14 +142,14 @@ int main(int, char *[]) {
       printf("%d ", itr->GetInt());
     printf("\n");
 
-    for(auto& v:a.GetArray())
+    for (auto &v : a.GetArray())
     {
-        v.GetInt();
+      v.GetInt();
     }
   }
 
   // Iterating object members
-  static const char *kTypeNames[] = {"Null",  "False",  "True",  "Object",
+  static const char *kTypeNames[] = {"Null", "False", "True", "Object",
                                      "Array", "String", "Number"};
   for (Value::ConstMemberIterator itr = document.MemberBegin();
        itr != document.MemberEnd(); ++itr)
@@ -159,7 +164,7 @@ int main(int, char *[]) {
     u_int64_t f20 = 1; // compute factorial of 20
     for (u_int64_t j = 1; j <= 20; j++)
       f20 *= j;
-    document["i"] = f20; // Alternate form: document["i"].SetUint64(f20)
+    document["i"] = f20;            // Alternate form: document["i"].SetUint64(f20)
     assert(!document["i"].IsInt()); // No longer can be cast as int or uint.
   }
 
@@ -222,10 +227,13 @@ int main(int, char *[]) {
   document.Accept(
       writer); // Accept() traverses the DOM and generates Handler events.
   puts(sb.GetString());
-#else
-    std::string o=build_json_msg();
-    printf("dom is %s\n", o.c_str());
-#endif
+  return 0;
+}
 
+int main(int, char *[])
+{
+
+  // test1();
+  // test2();
   return 0;
 }
