@@ -10,23 +10,25 @@
 
 using namespace std;
 
+namespace detail{
 typedef struct
 {
-    int _groupid;
-    int _spritetag;
+    string _groupid;
+    string _spritetag;
 } Animation;
 
 typedef struct
 {
-    int _questionid;
-    int _delay;
+    string _questionid;
+    string _delay;
+    string _sound;
     string _mode;
     vector<Animation> _animationgroup;
 } Question;
 
 typedef struct
 {
-    int _answerid;
+    string _answerid;
     string _mode;
     string _sound;
     string _keyword;
@@ -36,7 +38,7 @@ typedef struct
 {
     string _answermode;
     string _mode;
-    int _quantity;
+    string _quantity;
     vector<AnswerData> _answerset;
 } Answer;
 
@@ -44,13 +46,13 @@ typedef struct
 {
     string _sound;
     vector<Animation> _animationgroup;
-} listData;
+} List;
 
 typedef struct
 {
     string _mode;
     string _type;
-    vector<listData> _list;
+    vector<List> _list;
 } Prompt;
 
 typedef struct
@@ -62,13 +64,13 @@ typedef struct
 
 typedef struct
 {
-    int _groupid;
+    string _groupid;
     vector<QuestionSet> _questionSet;
 } GroupSet;
 
 typedef struct
 {
-    int _pageid;
+    string _pageid;
     string _mode;
     string _sound;
     vector<GroupSet> _groupSet;
@@ -101,5 +103,5 @@ string initBook(const string jsonFile)
 
     return str;
 }
-
+}
 #endif

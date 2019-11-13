@@ -11,64 +11,223 @@
 
 using namespace rapidjson;
 using namespace std;
+using namespace detail;
+
+void printBook(Book book)
+{
+  vector<string> lines;
+  lines.push_back("{");
+  lines.push_back(" book: [");
+  lines.push_back("   {");
+  for (auto page : book._pages)
+  {
+    lines.push_back("     page: {");
+    lines.push_back("       pageid: " + page._pageid);
+    lines.push_back("       mode: " + page._mode);
+    lines.push_back("       sound: " + page._sound);
+    lines.push_back("       groupset: [");
+    lines.push_back("         {");
+    for (auto groupMember : page._groupSet)
+    {
+      lines.push_back("           groupid: " + groupMember._groupid);
+      lines.push_back("           questionset: [");
+
+      for (auto questionMember : groupMember._questionSet)
+      {
+        lines.push_back("             {");
+        lines.push_back("               question: {");
+        lines.push_back("               questionid: " + questionMember._question._questionid);
+        lines.push_back("               delay: " + questionMember._question._delay);
+        lines.push_back("               sound: " + questionMember._question._sound);
+        lines.push_back("               mode: " + questionMember._question._mode);
+        lines.push_back("               animationgroup: [" );
+        for(auto animation:questionMember._question._animationgroup)
+        {
+          lines.push_back("                 {" );
+          lines.push_back("                   groupid: " + animation._groupid);
+          lines.push_back("                   spritetag: " + animation._spritetag);
+          lines.push_back("                 }" );
+        }
+        lines.push_back("           }," );
+      }
+      lines.push_back("   }" );
+    }
+  }
+  lines.push_back("}" );
+
+  for (auto line : lines)
+  {
+    cout << line << endl;
+  }
+}
 
 int main(int, char *[])
 {
+  Value::MemberIterator it;
   string fileString = initBook("rapidjson/guidesprite.txt");
-  std::cout << fileString << std::endl;
-  // printf("%s\n",fileString.c_str());
-  // test1();
-  // test2();
+  // std::cout << fileString << std::endl;
+
+  char buffer[fileString.length()];
+  memcpy(buffer, fileString.c_str(), fileString.length());
+
+  Document document;
+  if (document.Parse(buffer).HasParseError())
+  {
+    std::cout << "document parse failed" << std::endl;
+    return 1;
+  }
+
+  printf("\nParsing to document succeeded.\n");
+  printf("\nAccess values in document:\n");
+
+  assert(document.HasMember("book"));
+  SizeType pageNum = document["book"].Size();
+  pageNum = 1;
+  Book book;
+  book._pages.resize(pageNum);
+
+
+  for (SizeType i = 0; i < pageNum; ++i)
+  {
+    Value &pageJson = document["book"][i]["page"];
+    if ((it = pageJson.FindMember("pageid")) != pageJson.MemberEnd())
+      book._pages[i]._pageid = it->value.GetString();
+
+    if ((it = pageJson.FindMember("mode")) != pageJson.MemberEnd())
+      book._pages[i]._mode = it->value.GetString();
+
+    if ((it = pageJson.FindMember("sound")) != pageJson.MemberEnd())
+      book._pages[i]._sound = it->value.GetString();
+
+    assert((it = pageJson.FindMember("groupset")) != pageJson.MemberEnd());
+    SizeType groupsetNum = it->value.Size();
+    book._pages[i]._groupSet.resize(groupsetNum);
+
+    for (SizeType j = 0; j < groupsetNum; ++j)
+    {
+      Value &groupsetMemberJson = it->value[j];
+
+      assert(groupsetMemberJson.HasMember("groupid"));
+      book._pages[i]._groupSet[j]._groupid = groupsetMemberJson["groupid"].GetString();
+
+      assert(groupsetMemberJson.HasMember("questionset"));
+      SizeType questionsetNum = groupsetMemberJson["questionset"].Size();
+      book._pages[i]._groupSet[j]._questionSet.resize(questionsetNum);
+
+      for (SizeType k = 0; k < questionsetNum; ++k)
+      {
+        Value &questionsetMemberJson = groupsetMemberJson["questionset"][k];
+        //question
+        assert(questionsetMemberJson.HasMember("question"));
+        Value &questionJson = questionsetMemberJson["question"];
+
+        if (questionJson.HasMember("questionid"))
+          book._pages[i]._groupSet[j]._questionSet[k]._question._questionid = questionJson["questionid"].GetString();
+
+        if (questionJson.HasMember("delay"))
+          book._pages[i]._groupSet[j]._questionSet[k]._question._delay = questionJson["delay"].GetString();
+
+        if (questionJson.HasMember("sound"))
+          book._pages[i]._groupSet[j]._questionSet[k]._question._sound = questionJson["sound"].GetString();
+
+        assert(questionJson.HasMember("mode"));
+        book._pages[i]._groupSet[j]._questionSet[k]._question._mode = questionJson["mode"].GetString();
+
+        assert(questionJson.HasMember("animationgroup"));
+        SizeType animationgroupNum = questionJson["animationgroup"].Size();
+        book._pages[i]._groupSet[j]._questionSet[k]._question._animationgroup.resize(animationgroupNum);
+
+        for (SizeType l = 0; l < animationgroupNum; ++l)
+        {
+          Value &animationJson = questionJson["animationgroup"][l];
+          assert(animationJson.HasMember("groupid"));
+          book._pages[i]._groupSet[j]._questionSet[k]._question._animationgroup[l]._groupid = animationJson["groupid"].GetString();
+          assert(animationJson.HasMember("spritetag"));
+          book._pages[i]._groupSet[j]._questionSet[k]._question._animationgroup[l]._spritetag = animationJson["spritetag"].GetString();
+        }
+        //answer
+        assert(questionsetMemberJson.HasMember("answer"));
+        Value &answerJson = questionsetMemberJson["answer"];
+
+        assert(answerJson.HasMember("answermode"));
+        book._pages[i]._groupSet[j]._questionSet[k]._answer._answermode = answerJson["answermode"].GetString();
+
+        if (answerJson.HasMember("quantity"))
+          book._pages[i]._groupSet[j]._questionSet[k]._answer._quantity = answerJson["quantity"].GetString();
+
+        assert(answerJson.HasMember("answerset"));
+        SizeType answersetNum = answerJson["answerset"].Size();
+        book._pages[i]._groupSet[j]._questionSet[k]._answer._answerset.resize(answersetNum);
+
+        for (SizeType m = 0; m < answersetNum; ++m)
+        {
+          Value &answerdataJson = answerJson["answerset"][m]["answer"];
+
+          if (answerdataJson.HasMember("answerid"))
+            book._pages[i]._groupSet[j]._questionSet[k]._answer._answerset[m]._answerid = answerdataJson["answerid"].GetString();
+
+          if (answerdataJson.HasMember("mode"))
+            book._pages[i]._groupSet[j]._questionSet[k]._answer._answerset[m]._mode = answerdataJson["mode"].GetString();
+
+          if (answerdataJson.HasMember("sound"))
+            book._pages[i]._groupSet[j]._questionSet[k]._answer._answerset[m]._sound = answerdataJson["sound"].GetString();
+
+          if ((it = answerdataJson.FindMember("keyword")) != answerdataJson.MemberEnd())
+            book._pages[i]._groupSet[j]._questionSet[k]._answer._answerset[m]._keyword = it->value.GetString();
+        }
+
+        //promptset
+        assert(questionsetMemberJson.HasMember("promptset"));
+        Value &promptsetJson = questionsetMemberJson["promptset"];
+
+        assert(promptsetJson.IsArray());
+        SizeType promptsetNum = promptsetJson.Size();
+        book._pages[i]._groupSet[j]._questionSet[k]._promptSet.resize(promptsetNum);
+        for (SizeType n = 0; n < promptsetNum; ++n)
+        {
+          Value &promptJson = promptsetJson[n]["prompt"];
+
+          if ((it = promptJson.FindMember("mode")) != promptJson.MemberEnd())
+            book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._mode = it->value.GetString();
+
+          if ((it = promptJson.FindMember("type")) != promptJson.MemberEnd())
+            book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._type = it->value.GetString();
+
+          assert((it = promptJson.FindMember("list")) != promptJson.MemberEnd());
+          Value &listJson = it->value;
+          assert(listJson.IsArray());
+          SizeType listNum = listJson.Size();
+          book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._list.resize(listNum);
+          for (SizeType listIndex = 0; listIndex < listNum; ++listIndex)
+          {
+            Value &listMemberJson = listJson[listIndex];
+            if ((it = listMemberJson.FindMember("sound")) != promptJson.MemberEnd())
+              book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._list[listIndex]._sound = it->value.GetString();
+
+            assert((it = listMemberJson.FindMember("animationgroup")) != promptJson.MemberEnd());
+            Value &animationgroupJson = it->value;
+            assert(animationgroupJson.IsArray());
+            SizeType animationgroupNumOfList = animationgroupJson.Size();
+            book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._list[listIndex]._animationgroup.resize(animationgroupNumOfList);
+            for (SizeType animationgroupIndexOfList = 0; animationgroupIndexOfList < animationgroupNumOfList; ++animationgroupIndexOfList)
+            {
+
+              Value &animationOfListJson = animationgroupJson[animationgroupIndexOfList];
+
+              if ((it = animationOfListJson.FindMember("groupid")) != promptJson.MemberEnd())
+                book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._list[listIndex]._animationgroup[animationgroupIndexOfList]._groupid = it->value.GetString();
+
+              if ((it = animationOfListJson.FindMember("spritetag")) != promptJson.MemberEnd())
+                book._pages[i]._groupSet[j]._questionSet[k]._promptSet[n]._list[listIndex]._animationgroup[animationgroupIndexOfList]._spritetag = it->value.GetString();
+            }
+          }
+        }
+      }
+    }
+
+    printBook(book);
+  }
   return 0;
-}
-
-/*
-{
-    "name":"jack",//常规的
-    "age":18,
-    "sub":["a","b"],//value是数组
-    "elp":[ {"a":"A","b":"B"},//value是一个数组且里面每个元素又是一个json格式
-            {"c":"C","d":"D"},
-          ]
-}
-*/
-std::string build_json_msg()
-{
-  Document doc;
-  doc.SetObject();
-  Document::AllocatorType &a = doc.GetAllocator();
-
-  doc.AddMember("name", "jack", a);
-  doc.AddMember("age", 18, a);
-
-  Value sub(kArrayType);
-  sub.PushBack("a", a);
-  sub.PushBack("b", a);
-  doc.AddMember("sub", sub, a);
-
-  Value json(kArrayType);
-  Value obj(kObjectType);
-  obj.AddMember("a", "A", a);
-  obj.AddMember("b", "B", a);
-  json.PushBack(obj, a);
-
-  Value obj1(kObjectType);
-  obj1.AddMember("c", "C", a);
-  obj1.AddMember("d", "D", a);
-  json.PushBack(obj1, a);
-
-  doc.AddMember("elp", json, a);
-
-  StringBuffer s;
-  Writer<StringBuffer> writer(s);
-  doc.Accept(writer);
-  return std::string(s.GetString());
-}
-
-void test1()
-{
-  std::string o = build_json_msg();
-  printf("dom is %s\n", o.c_str());
 }
 
 int test2()
@@ -76,7 +235,7 @@ int test2()
   ////////////////////////////////////////////////////////////////////////////
   // 1. Parse a JSON text string to a document.
 
-  const char json[] =
+  char json[] =
       " { \"hello\" : \"world\", \"t\" : true , \"f\" : false, \"n\": null, "
       "\"i\":123, \"pi\": 3.1416, \"a\":[1, 2, 3, 4] } ";
   printf("Original JSON:\n %s\n", json);
@@ -114,6 +273,11 @@ int test2()
   // member and its value:
   Value::MemberIterator hello = document.FindMember("hello");
   assert(hello != document.MemberEnd());
+
+  // Value::MemberIterator it;
+  // if((it = document.FindMember("hello")) != document.MemberEnd());
+  // it->value;
+
   assert(hello->value.IsString());
   assert(strcmp("world", hello->value.GetString()) == 0);
   (void)hello;
@@ -240,4 +404,53 @@ int test2()
       writer); // Accept() traverses the DOM and generates Handler events.
   puts(sb.GetString());
   return 0;
+}
+
+/*
+{
+    "name":"jack",//常规的
+    "age":18,
+    "sub":["a","b"],//value是数组
+    "elp":[ {"a":"A","b":"B"},//value是一个数组且里面每个元素又是一个json格式
+            {"c":"C","d":"D"},
+          ]
+}
+*/
+std::string build_json_msg()
+{
+  Document doc;
+  doc.SetObject();
+  Document::AllocatorType &a = doc.GetAllocator();
+
+  doc.AddMember("name", "jack", a);
+  doc.AddMember("age", 18, a);
+
+  Value sub(kArrayType);
+  sub.PushBack("a", a);
+  sub.PushBack("b", a);
+  doc.AddMember("sub", sub, a);
+
+  Value json(kArrayType);
+  Value obj(kObjectType);
+  obj.AddMember("a", "A", a);
+  obj.AddMember("b", "B", a);
+  json.PushBack(obj, a);
+
+  Value obj1(kObjectType);
+  obj1.AddMember("c", "C", a);
+  obj1.AddMember("d", "D", a);
+  json.PushBack(obj1, a);
+
+  doc.AddMember("elp", json, a);
+
+  StringBuffer s;
+  Writer<StringBuffer> writer(s);
+  doc.Accept(writer);
+  return std::string(s.GetString());
+}
+
+void test1()
+{
+  std::string o = build_json_msg();
+  printf("dom is %s\n", o.c_str());
 }
