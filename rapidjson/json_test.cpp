@@ -7,6 +7,7 @@
 
 #include <string>
 #include "GuideSprite.h"
+#include "jsontxt.h"
 #include <iostream>
 
 using namespace rapidjson;
@@ -453,4 +454,128 @@ void test1()
 {
   std::string o = build_json_msg();
   printf("dom is %s\n", o.c_str());
+}
+
+namespace jsontxt{
+AnimationGroupSet getAnimationnGroup(const rapidjson::Value &animationGroupSetJson);
+
+int init2()
+{
+  string fileString = initBook("rapidjson/json.txt");
+
+    // "book_res/" +
+    // std::string bookPath =  BookParser::getInstance()->getBookPath();
+    // auto jsonStr = FileUtils::getInstance()->getStringFromFile(bookPath + "/json.txt");
+
+    Document doc;
+    if (doc.Parse(fileString.c_str()).HasParseError())
+    {
+        printf("&&& doc parse failed");
+        return 1;
+    }
+    
+    assert(doc.HasMember("book"));
+    rapidjson::Value &book = doc["book"];
+    //    int pageNum = book.Size();
+    
+    // int currentPage = BookParser::getInstance()->getCurrentPage();
+    int currentPage = 3;
+    rapidjson::Value &pageJson = book[currentPage - 1]["page"];
+    rapidjson::Value::MemberIterator it;
+    
+    if ((it = pageJson.FindMember("animationgroupset")) != pageJson.MemberEnd())
+    {
+        rapidjson::Value &animationGroupSetJson = it->value;
+        getAnimationnGroup(animationGroupSetJson);
+    }
+        
+    return 0;
+}
+
+AnimationGroupSet getAnimationnGroup(const rapidjson::Value& animationGroupSetJson)
+{
+    rapidjson::Value::ConstMemberIterator it;
+    AnimationGroupSet animationGroupSet;
+    assert(animationGroupSetJson.IsArray());
+    rapidjson::SizeType groupNum = animationGroupSetJson.Size();
+    animationGroupSet._animationGroups.resize(groupNum);
+    
+    for(rapidjson::SizeType i = 0; i < groupNum; ++i)
+    {
+        const rapidjson::Value& animationGroupJson = animationGroupSetJson[i]["animationgroup"];
+        assert(animationGroupJson.IsArray());
+        rapidjson::SizeType memNum = animationGroupJson.Size();
+        animationGroupSet._animationGroups.at(i)._animationGroupMems.resize(memNum);
+        
+        for(rapidjson::SizeType j = 0; j < memNum; ++j)
+        {
+            AnimationGroupMem* animationGroupMem = &animationGroupSet._animationGroups.at(i)._animationGroupMems.at(j);
+            
+            if ((it = animationGroupJson[j].FindMember("event")) != animationGroupJson[j].MemberEnd())
+                animationGroupMem->_event = it->value.GetString();
+            
+            if ((it = animationGroupJson[j].FindMember("spritetag")) != animationGroupJson[j].MemberEnd())
+                animationGroupMem->_spriteTag = stoi(it->value.GetString());
+            
+            if ((it = animationGroupJson[j].FindMember("animationset")) != animationGroupJson[j].MemberEnd())
+            {
+                const rapidjson::Value& animationSetJson = animationGroupJson[j]["animationset"];
+                assert(animationSetJson.IsArray());
+                rapidjson::SizeType animationNum = animationSetJson.Size();
+                
+                animationGroupMem->_animationSet._animations.resize(animationNum);
+                
+                for(rapidjson::SizeType k = 0; k < animationNum; ++k)
+                {
+                    const rapidjson::Value& animationJson = animationSetJson[k]["animation"];
+                    Animation* animation = &animationGroupMem->_animationSet._animations.at(k);
+                    
+                    if ((it = animationJson.FindMember("style")) != animationJson.MemberEnd())
+                    {
+                        animation->_style = it->value.GetString();
+                        printf("&&& style = %s", it->value.GetString());
+                    }
+                    
+                    if ((it = animationJson.FindMember("category")) != animationJson.MemberEnd())
+                        animation->_category = it->value.GetString();
+                    
+                    if ((it = animationJson.FindMember("touch")) != animationJson.MemberEnd())
+                        animation->_touch = it->value.GetString();
+                    
+                    if ((it = animationJson.FindMember("property")) != animationJson.MemberEnd())
+                    {
+                        const rapidjson::Value& propertyJson = it->value;
+                        
+                        if ((it = propertyJson.FindMember("delay")) != propertyJson.MemberEnd())
+                            animation->_property._delay = stof(it->value.GetString());
+                        
+                        if ((it = propertyJson.FindMember("duration")) != propertyJson.MemberEnd())
+                            animation->_property._duration = stof(it->value.GetString());
+                        
+                        if ((it = propertyJson.FindMember("opacity")) != propertyJson.MemberEnd())
+                            animation->_property._opacity = stof(it->value.GetString());
+                        
+                        if ((it = propertyJson.FindMember("scaleX")) != propertyJson.MemberEnd())
+                            animation->_property._scaleX = stof(it->value.GetString());
+                        
+                        if ((it = propertyJson.FindMember("scaleY")) != propertyJson.MemberEnd())
+                            animation->_property._scaleY = stof(it->value.GetString());
+                        
+                        if ((it = propertyJson.FindMember("endposition")) != propertyJson.MemberEnd())
+                        {
+                            const rapidjson::Value& endPositionJson = it->value;
+                            
+                            if ((it = endPositionJson.FindMember("x")) != endPositionJson.MemberEnd())
+                                animation->_property._endPosition._x = stof(it->value.GetString());
+                            
+                            if ((it = endPositionJson.FindMember("y")) != endPositionJson.MemberEnd())
+                                animation->_property._endPosition._y = stof(it->value.GetString());
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return animationGroupSet;
+}
 }
